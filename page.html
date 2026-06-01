@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>my website</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+body {
+  background: linear-gradient(135deg, #0D0D0D, #C71585, #003366);
+  color: #FFFFFF;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* العناوين */
+h1, h2 {
+  color: #C71585;
+  transition: color 1s ease;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* الفقرات */
+p {
+  color: #CCCCCC;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto;
+  font-size: 1.1em;
+}
+
+/* الأزرار */
+button {
+  margin: 20px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+/* زر رئيسي */
+.button-primary {
+  background-color: #C71585;
+  color: #FFFFFF;
+  border: none;
+  box-shadow: 0 0 10px #C71585;
+}
+
+.button-primary:hover {
+  background-color: #4DA6FF;
+  box-shadow: 0 0 20px #4DA6FF;
+  transform: scale(1.1);
+}
+
+/* زر ثانوي */
+.button-secondary {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 2px solid #4DA6FF;
+}
+
+.button-secondary:hover {
+  background-color: #4DA6FF;
+  color: #000000;
+  transform: scale(1.1);
+}
+
+            </style>
+    </head>
+    <body>
+        <h1>Welcome to my portfolio!
+I’m Haytham, a passionate web developer and founder of HZY Coding. I create modern, responsive, and user-friendly websites that bring ideas to life.
+</h1>
+        <p>I am a professional web developer.</p>
+        <p>I specialize in creating responsive and user-friendly websites.</p>
+        <p>I provide:
+- Professional web development
+- Bot creation and automation
+- Video editing and creative design
+- Arabic calligraphy (Diwani & Thuluth styles)
+
+My goal is to deliver high-quality projects that balance functionality and aesthetics.
+</p>
+        <p>My mission is to help businesses and individuals build a strong online presence through innovative web solutions and creative design.
+</p>
+<p>Explore my work — from websites and tools to creative projects. Each project reflects my dedication to detail, performance, and design.
+</p>
+<p>Let’s collaborate!
+Whether you need a website, a digital tool, or creative design, I’m here to turn your vision into reality.
+</p>
+          <button class="button-secondary"><a href="contact.html">Contact me</a></button>
+          
+          <script>
+            const h1 = document.querySelector('h1');
+            h1.addEventListener('mouseover', () => {
+              h1.style.color = '#4DA6FF';
+            });
+            h1.addEventListener('mouseout', () => {
+              h1.style.color = '#C71585';
+            });
+          </script>
+          <script>
+            const p = document.querySelector('p');
+            p.addEventListener('mouseover', () => {
+              p.style.color = '#4DA6FF';
+            });
+            p.addEventListener('mouseout', () => {
+              p.style.color = '#CCCCCC';
+            });
+          </script>
+          
+          <script>
+            const buttonPrimary = document.querySelector('.button-primary');
+            buttonPrimary.addEventListener('mouseover', () => {
+              buttonPrimary.style.backgroundColor = '#4DA6FF';
+              buttonPrimary.style.boxShadow = '0 0 20px #4DA6FF';
+            });
+            buttonPrimary.addEventListener('mouseout', () => {
+              buttonPrimary.style.backgroundColor = '#C71585';
+              buttonPrimary.style.boxShadow = '0 0 10px #C71585';
+            });
+          </script>
+  
+         <button><a href="index.html">رجوع</a></button>
+        </body>
+</html>
