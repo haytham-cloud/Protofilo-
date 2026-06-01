@@ -1,19 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question</title>
-    <style>
-    body {
-        text-align: center;
-        font-size: x-large;
+  <meta charset="UTF-8">
+  <title>Haytham Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg-dark: linear-gradient(135deg, #0D0D0D, #C71585, #003366);
+      --text-dark: #F5F5F5;
+      --heading-dark: #FFD700;
+      --card-dark: #1C1C1C;
+      --border-dark: #4DA6FF;
+
+      --bg-light: linear-gradient(135deg, #FFFFFF, #FFDEE9, #B5FFFC);
+      --text-light: #222222;
+      --heading-light: #003366;
+      --card-light: #F0F0F0;
+      --border-light: #C71585;
     }
-</style>
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    h1, h2 {
+      color: var(--heading-dark);
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2em;
+      transition: color 0.5s ease;
+    }
+
+    p {
+      color: var(--text-dark);
+      line-height: 1.8;
+      text-align: center;
+      max-width: 800px;
+      margin: 15px auto;
+      font-size: 1.2em;
+      transition: color 0.5s ease;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px;
+    }
+
+    nav a {
+      color: var(--text-dark);
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #4DA6FF;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .card {
+      background-color: var(--card-dark);
+      border: 2px solid var(--border-dark);
+      border-radius: 8px;
+      color: var(--text-dark);
+      padding: 20px;
+      margin: 10px;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease, color 0.5s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #4DA6FF;
+    }
+
+    .toggle-mode {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5em;
+      border: none;
+      background-color: #C71585;
+      color: #FFFFFF;
+      box-shadow: 0 0 10px #C71585;
+      transition: background 0.3s ease, transform 0.3s ease;
+      z-index: 999;
+    }
+
+    .toggle-mode:hover {
+      background-color: #4DA6FF;
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000000;
+      color: #CCCCCC;
+      margin-top: 40px;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      p {
+        font-size: 0.95em;
+      }
+      .card {
+        width: 90%;
+      }
+    }
+
+    body.light-mode {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+    body.light-mode h1, body.light-mode h2 {
+      color: var(--heading-light);
+    }
+    body.light-mode p, body.light-mode nav a {
+      color: var(--text-light);
+    }
+    body.light-mode .card {
+      background-color: var(--card-light);
+      border: 2px solid var(--border-light);
+      color: var(--text-light);
+    }
+    body.light-mode footer {
+      background-color: #F0F0F0;
+      color: #222222;
+    }
+  .whatsapp-btn {
+  display: inline-block;
+  background-color: #25D366; /* أخضر واتساب */
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #25D366;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E; /* أخضر غامق */
+  box-shadow: 0 0 20px #128C7E;
+  transform: scale(1.05);
+}
+
+  </style>
 </head>
 <body>
-    are you use phone or computer?
-    <button><a href="phone.html">phone</a></button>
-    <button><a href="page.html">computer</a></button>
+  <header>
+    <h1>Hi, I'm Haytham 👋</h1>
+    <p>Founder of HZY Coding | Web Developer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <button class="toggle-mode" id="modeBtn">🌙</button>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate web developer who loves creating modern, responsive, and user-friendly websites. My work combines creativity with technical expertise to deliver unique digital solutions.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="cards">
+      <div class="card">Web Development</div>
+      <div class="card">Bot Creation</div>
+      <div class="card">Video Editing</div>
+      <div class="card">Arabic Calligraphy</div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Explore my work — from websites and tools to creative projects. Each project reflects my dedication to detail, performance, and design.</p>
+  </section>
+
+  
+  <section id="contact">
+  <h2>Contact Me</h2>
+  <a href="contact.html" 
+     class="whatsapp-btn" target="_blank">💬 Message me on WhatsApp</a>
+</section>
+
+  <footer>
+    <p>© 2026 Haytham | HZY Coding</p>
+  </footer>
+
+  <script>
+    const modeBtn = document.getElementById('modeBtn');
+    modeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      if (document.body.classList.contains('light-mode')) {
+        modeBtn.textContent = '☀️';
+      } else {
+        modeBtn.textContent = '🌙';
+      }
+    });
+  </script>
 </body>
 </html>
